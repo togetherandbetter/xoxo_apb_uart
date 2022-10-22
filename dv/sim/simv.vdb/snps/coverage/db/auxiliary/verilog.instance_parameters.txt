@@ -1,0 +1,14 @@
+tbench_top.DUT.apb_uart_instance.receiver_instance.IDLE0
+tbench_top.DUT.apb_uart_instance.receiver_instance.RX_DATA_BITS2
+tbench_top.DUT.apb_uart_instance.receiver_instance.RX_DONE_STATE6
+tbench_top.DUT.apb_uart_instance.receiver_instance.RX_PARITY3
+tbench_top.DUT.apb_uart_instance.receiver_instance.RX_START_BIT1
+tbench_top.DUT.apb_uart_instance.receiver_instance.RX_STOP_BIT14
+tbench_top.DUT.apb_uart_instance.receiver_instance.RX_STOP_BIT25
+tbench_top.DUT.apb_uart_instance.transmtr_instance.IDLE0
+tbench_top.DUT.apb_uart_instance.transmtr_instance.TX_DATA_BITS2
+tbench_top.DUT.apb_uart_instance.transmtr_instance.TX_DONE6
+tbench_top.DUT.apb_uart_instance.transmtr_instance.TX_FIRST_STOP_BIT4
+tbench_top.DUT.apb_uart_instance.transmtr_instance.TX_PARITY_BIT3
+tbench_top.DUT.apb_uart_instance.transmtr_instance.TX_SECOND_STOP_BIT5
+tbench_top.DUT.apb_uart_instance.transmtr_instance.TX_START_BIT1

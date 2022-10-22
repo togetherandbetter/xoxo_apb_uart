@@ -1,0 +1,406 @@
+debImport "-sv" "-f" "flist"
+wvCreateWindow
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/host/project/apb-uart-uvm-env-main/sim/verilog.fsdb}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PCLK" -line 11 -pos 2 -win $_nTrace1
+srcSelect -signal "PRESETn" -line 12 -pos 2 -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "vifapb.PSELx" -line 13 -pos 1
+srcSelect -win $_nTrace1 -signal "vifapb.PENABLE" -line 14 -pos 1
+srcSelect -win $_nTrace1 -signal "vifapb.PWRITE" -line 15 -pos 1
+srcSelect -win $_nTrace1 -signal "vifuart.Tx" -line 16 -pos 1
+srcSelect -win $_nTrace1 -signal "vifuart.RX" -line 17 -pos 1
+srcSelect -win $_nTrace1 -signal "vifapb.PREADY" -line 18 -pos 1
+srcSelect -win $_nTrace1 -signal "vifapb.PSLVERR" -line 19 -pos 1
+srcSelect -win $_nTrace1 -signal "vifapb.PWDATA" -line 20 -pos 1
+srcSelect -win $_nTrace1 -signal "vifapb.PADDR" -line 21 -pos 1
+srcSelect -win $_nTrace1 -signal "vifapb.PRDATA" -line 22 -pos 1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 0.000000 92407871304.337769
+wvZoom -win $_nWave2 0.000000 13842474648.827925
+wvZoom -win $_nWave2 0.000000 560424074.851333
+wvZoom -win $_nWave2 0.000000 30792531.585238
+wvZoom -win $_nWave2 0.000000 2742654.635122
+wvZoom -win $_nWave2 0.000000 440982.063947
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 4 )} 
+wvSetCursor -win $_nWave2 368292.712747 -snap {("G1" 5)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcHBSelect "tbench_top.DUT" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top.DUT" -delim "."
+srcHBSelect "tbench_top.DUT" -win $_nTrace1
+srcHBSelect "tbench_top.vifapb" -win $_nTrace1
+srcHBShowTip off
+srcHBSelect "tbench_top.DUT.apb_slave_instance" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top.DUT.apb_slave_instance" -delim "."
+srcHBSelect "tbench_top.DUT.apb_slave_instance" -win $_nTrace1
+srcHBSelect "tbench_top.DUT" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top.DUT" -delim "."
+srcHBSelect "tbench_top.DUT" -win $_nTrace1
+wvSelectSignal -win $_nWave2 {( "G1" 2 3 4 5 6 7 8 9 10 11 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 0)}
+srcInvokeExtEditor -win $_nTrace1
+srcCloseWindow -win $_nTrace3
+srcSelect -signal "PCLK" -line 5 -pos 1 -win $_nTrace1
+srcSelect -signal "PRESETn" -line 6 -pos 1 -win $_nTrace1
+srcSelect -signal "PSELx" -line 7 -pos 1 -win $_nTrace1
+srcSelect -signal "PENABLE" -line 8 -pos 1 -win $_nTrace1
+srcSelect -signal "PWRITE" -line 9 -pos 1 -win $_nTrace1
+wvAddSignal -win $_nWave2 "/tbench_top/DUT/PCLK" "/tbench_top/DUT/PRESETn" \
+           "/tbench_top/DUT/PSELx" "/tbench_top/DUT/PENABLE" \
+           "/tbench_top/DUT/PWRITE"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvSetPosition -win $_nWave2 {("G1/DUT" 0)}
+wvAddSubGroup -win $_nWave2 -holdpost {DUT}
+wvAddSignal -win $_nWave2 "/tbench_top/DUT/PCLK" "/tbench_top/DUT/PRESETn" \
+           "/tbench_top/DUT/PSELx" "/tbench_top/DUT/PENABLE" \
+           "/tbench_top/DUT/PWRITE" "/tbench_top/DUT/PWDATA\[31:0\]" \
+           "/tbench_top/DUT/PADDR\[31:0\]" "/tbench_top/DUT/RX" \
+           "/tbench_top/DUT/PRDATA\[31:0\]" "/tbench_top/DUT/PREADY" \
+           "/tbench_top/DUT/PSLVERR" "/tbench_top/DUT/Tx"
+wvSetPosition -win $_nWave2 {("G1/DUT" 0)}
+wvSetPosition -win $_nWave2 {("G1/DUT" 12)}
+wvUndo -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1/DUT" 1)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1/DUT" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSetPosition -win $_nWave2 {("G1" 4)}
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvSetPosition -win $_nWave2 {("G1/DUT" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 5)}
+wvSetPosition -win $_nWave2 {("G2" 5)}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSelectGroup -win $_nWave2 {G1}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1/DUT" 0)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1/DUT" 0)}
+wvSetPosition -win $_nWave2 {("G1/DUT" 0)}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSelectGroup -win $_nWave2 {G2}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvMoveSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvSelectGroup -win $_nWave2 {G4}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSelectGroup -win $_nWave2 {G3}
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 0)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PRESETn" -line 6 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PCLK" -line 5 -pos 1 -win $_nTrace1
+srcSelect -signal "PRESETn" -line 6 -pos 1 -win $_nTrace1
+srcSelect -signal "PSELx" -line 7 -pos 1 -win $_nTrace1
+srcSelect -signal "PENABLE" -line 8 -pos 1 -win $_nTrace1
+srcSelect -signal "PWRITE" -line 9 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 14916231194.794680 62939219431.694626
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 11641936542.278774 50569661855.523422
+wvSelectSignal -win $_nWave2 {( "G1" 3 )} 
+wvZoom -win $_nWave2 18418827993.563602 21278180865.039642
+wvZoom -win $_nWave2 19378009407.936001 19616151000.470734
+wvZoom -win $_nWave2 19419329522.308495 19423461533.746346
+wvZoom -win $_nWave2 19420610469.744007 19421506654.989346
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PRESETn" -line 6 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PSELx" -line 7 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PSELx" -line 7 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PENABLE" -line 8 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PWRITE" -line 9 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PWDATA" -line 10 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvSetCursor -win $_nWave2 19420917318.592079 -snap {("G1" 6)}
+wvSetMarker -win $_nWave2 19421041000.000000
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PADDR" -line 11 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvSetCursor -win $_nWave2 19420943753.206024 -snap {("G1" 1)}
+wvSetCursor -win $_nWave2 19420952564.744007 -snap {("G1" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PREADY" -line 15 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PSLVERR" -line 16 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "RX" -line 12 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 0.000000 80765934762.058990
+wvZoom -win $_nWave2 0.000000 5792351596.584913
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 0.000000 58937303745.286293
+wvZoom -win $_nWave2 0.000000 7294727010.694775
+wvZoom -win $_nWave2 0.000000 679266077.918947
+wvZoom -win $_nWave2 0.000000 46358240.135590
+wvZoom -win $_nWave2 0.000000 5201560.778661
+wvZoom -win $_nWave2 15042.107515 1064981.212057
+wvZoomOut -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 3 4 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 10 )} 
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "Tx" -line 17 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoom -win $_nWave2 59301114262.232506 221196794303.296722
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "RX" -line 12 -pos 1 -win $_nTrace1
+srcTraceLoad "tbench_top.DUT.RX" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "Start_Bit_Detected" -line 52 -pos 1 -win $_nTrace1
+srcAddSelectedToWave -clipboard -win $_nTrace1
+wvDrop -win $_nWave2
+wvZoom -win $_nWave2 0.000000 108415534049.971085
+wvZoom -win $_nWave2 0.000000 14484666492.506258
+wvZoom -win $_nWave2 1457681879.523475 2404337353.007112
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcHBSelect "tbench_top" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top" -delim "."
+srcHBSelect "tbench_top" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {40 45 1 1 1 1} -backward
+srcDeselectAll -win $_nTrace1
+srcHBSelect "clk_rst_pkg" -win $_nTrace1 -lib "work"
+srcSetScope -win $_nTrace1 "clk_rst_pkg" -delim "." -lib "work"
+srcHBSelect "clk_rst_pkg" -win $_nTrace1 -lib "work"
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcHBSelect "clk_rst_pkg.freq2period" -win $_nTrace1 -lib "work"
+srcSetScope -win $_nTrace1 "clk_rst_pkg.freq2period" -delim "." -lib "work"
+srcHBSelect "clk_rst_pkg.freq2period" -win $_nTrace1 -lib "work"
+srcHBSelect "tbench_top.DUT.apb_uart_instance" -win $_nTrace1
+srcHBSelect "tbench_top.DUT.apb_uart_instance" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top.DUT.apb_uart_instance" -delim "."
+srcHBSelect "tbench_top.DUT.apb_uart_instance" -win $_nTrace1
+srcHBSelect "tbench_top.DUT.apb_slave_instance" -win $_nTrace1
+srcHBSelect "tbench_top.DUT" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top.DUT" -delim "."
+srcHBSelect "tbench_top.DUT" -win $_nTrace1
+srcHBSelect "tbench_top" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top" -delim "."
+srcHBSelect "tbench_top" -win $_nTrace1
+srcHBDrag -win $_nTrace1
+srcHBSelect "tbench_top.DUT" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {16 23 5 1 1 1}
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {12 24 1 1 1 1} -backward
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PRESETn" -line 12 -pos 2 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "vifapb.PENABLE" -line 14 -pos 1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -signal "vifapb.PENABLE" -line 14 -pos 1
+srcAction -pos 13 7 9 -win $_nTrace1 -name "vifapb.PENABLE" -ctrlKey off
+verdiDockWidgetMaximize -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+verdiDockWidgetRestore -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {16 23 1 7 1 1} -backward
+srcDeselectAll -win $_nTrace1
+srcHBSelect "tbench_top.vifapb.monitor_cb" -win $_nTrace1
+srcHBSelect "tbench_top.vifapb.monitor_cb" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top.vifapb.monitor_cb" -delim "."
+srcHBSelect "tbench_top.vifapb.monitor_cb" -win $_nTrace1
+srcHBSelect "tbench_top.vifapb.monitor_cb" -win $_nTrace1
+srcHBSelect "tbench_top.vifapb.driver_cb" -win $_nTrace1
+srcHBSelect "tbench_top.vifapb" -win $_nTrace1
+srcHBSelect "tbench_top.vifapb" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top.vifapb" -delim "."
+srcHBSelect "tbench_top.vifapb" -win $_nTrace1
+srcHBSelect "tbench_top.vifuart.driver_cb" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top.vifuart.driver_cb" -delim "."
+srcHBSelect "tbench_top.vifuart.driver_cb" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {19 19 4 4 5 6} -backward
+srcHBSelect "tbench_top.assertions" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tbench_top.assertions" -delim "."
+srcHBSelect "tbench_top.assertions" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {15 16 2 1 1 1}
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {16 18 1 1 1 1} -backward
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PENABLE" -line 15 -pos 1 -win $_nTrace1
+srcSelect -win $_nTrace1 -range {15 15 12 12 1 2} -backward
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {14 17 1 1 1 1} -backward
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PWRITE" -line 15 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PSELx" -line 15 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PENABLE" -line 15 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PENABLE" -line 18 -pos 1 -win $_nTrace1
+srcSelect -win $_nTrace1 -range {18 18 13 13 5 6} -backward
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PSELx" -line 18 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PWRITE" -line 18 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {18 20 1 1 1 1} -backward
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {45 50 2 1 1 1}
+srcDeselectAll -win $_nTrace1
+debExit
