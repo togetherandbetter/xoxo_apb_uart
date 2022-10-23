@@ -20,6 +20,7 @@ class apbuart_env extends uvm_env;
 
     extern virtual function void build_phase(uvm_phase phase);
     extern virtual function void connect_phase(uvm_phase phase);
+    extern virtual function void end_of_elaboration_phase(uvm_phase phase);
 
 endclass : apbuart_env
 
@@ -48,3 +49,9 @@ function void apbuart_env::connect_phase(uvm_phase phase);
     uvm_config_db#(apb_sequencer)::set(this,"*","apb_sqr",apb_agnt.sequencer);
     uvm_config_db#(uart_sequencer)::set(this,"*","uart_sqr",uart_agnt.sequencer);
 endfunction : connect_phase
+
+function void apbuart_env::end_of_elaboration_phase(uvm_phase phase);
+    super.end_of_elaboration_phase(phase);
+    uvm_top.print_topology();
+endfunction : end_of_elaboration_phase
+

@@ -35,13 +35,15 @@ module tbench_top;
 	             	            .PRDATA(vifapb.PRDATA)            
                               );
   
-  initial 
-  begin 
+  initial begin 
     uvm_config_db # (virtual apb_if)::set(uvm_root::get(),"*","vifapb",vifapb);
     uvm_config_db # (virtual uart_if)::set(uvm_root::get(),"*","vifuart",vifuart);
     uvm_config_db # (virtual clk_rst_interface)::set(uvm_root::get(),"*","vifclk",vifclk);
     $dumpfile("dump.vcd"); 
     $dumpvars;
+    
+    //$fsdbAutoSwitchDumpfile(5000,"aump.fsdb",20);
+    //$fsdbDumpvarToFile("dump.list");
   end
 
   initial

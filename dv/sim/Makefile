@@ -1,14 +1,16 @@
-SCALE=1ns
+SIM_PATH=$(PWD)
 FILE = testname.f
-TEST_NAMES =`cat $(FILE)`
 VERB=UVM_MEDIUM
 SEED=$(shell date +%s)
-TEST=apbuart_config_test
+TEST_NAMES =`cat $(FILE)`
+##TEST=apbuart_config_test
+TEST=
 
 compile:
 			@echo "Compiling Design"
-			rm -rf out; mkdir out;\
-			vcs -sverilog -ntb_opts uvm-1.2 -full64 -f flist -timescale=1ns/1ps -cm line+tgl+cond+branch+assert+fsm -assert -full64 -LDFLAGS '-Wl,--no-as-needed' -o out/simv
+			@echo "Current path: $(SIM_PATH)"
+			vcs -sverilog -ntb_opts uvm-1.2 -full64 -f flist -timescale=1ns/1ps -l out/vcs.log \
+			-cm line+tgl+cond+branch+assert+fsm -assert -full64 -LDFLAGS '-Wl,--no-as-needed' -o out/simv
 
 run_all:
 			@echo "Running Tests"
@@ -31,11 +33,11 @@ run_cov_all:
 			done
 			urg -dir *_test/*.vdb -elfile exclusion.el -excl_bypass_checks	
 
-run_base:
+run:
 			@echo "Running $(TEST) Test"
-			@echo $(PWD);\
-			cd out;\
-			./simv -l ${TEST}.log +UVM_TIMEOUT=900000000 +UVM_TESTNAME=${TEST} UVM_VERBOSITY=${VERB} +ntb_random_seed=${SEED} 
+			@echo $(SIM_PATH)
+			cd out; mkdir $(TEST); cd $(TEST);\
+			../simv -l ${TEST}.log +UVM_TIMEOUT=900000000 +UVM_TESTNAME=${TEST} UVM_VERBOSITY=${VERB} +ntb_random_seed=${SEED} 
 
 dve: 		
 			dve -covdir *_test/*.vdb &
