@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#====================== PATH ===========================  
+export SIM_PATH=/home/host/project/apb_uart_clean/dv/sim;
+export TMP_PATH=$SIM_PATH/out
+
+#====================== Option =========================
+#VCS_OPTS=
+#SIM_OPTS=
+
+
+
+

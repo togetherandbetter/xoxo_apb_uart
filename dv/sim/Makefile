@@ -1,4 +1,4 @@
-SIM_PATH=$(PWD)
+##SIM_PATH=$(PWD)
 FILE = testname.f
 VERB=UVM_MEDIUM
 SEED=$(shell date +%s)
@@ -36,7 +36,7 @@ run_cov_all:
 run:
 			@echo "Running $(TEST) Test"
 			@echo $(SIM_PATH)
-			cd out; mkdir $(TEST); cd $(TEST);\
+			cd $(TMP_PATH); mkdir $(TEST); cd $(TEST);\
 			../simv -l ${TEST}.log +UVM_TIMEOUT=900000000 +UVM_TESTNAME=${TEST} UVM_VERBOSITY=${VERB} +ntb_random_seed=${SEED} 
 
 dve: 		
