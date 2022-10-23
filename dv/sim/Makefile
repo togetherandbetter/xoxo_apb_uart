@@ -1,13 +1,16 @@
-TEST=apbuart_config_test
 SCALE=1ns
 FILE = testname.f
 TEST_NAMES =`cat $(FILE)`
+VERB=UVM_MEDIUM
+SEED=$(shell date +%s)
+TEST=apbuart_config_test
 
 compile:
 			@echo "Compiling Design"
-			vcs -sverilog -ntb_opts uvm-1.2 -f flist -timescale=1ns/1ps -cm line+tgl+cond+branch+assert+fsm -assert -full64 -LDFLAGS '-Wl,--no-as-needed'
+			rm -rf out; mkdir out;\
+			vcs -sverilog -ntb_opts uvm-1.2 -full64 -f flist -timescale=1ns/1ps -cm line+tgl+cond+branch+assert+fsm -assert -full64 -LDFLAGS '-Wl,--no-as-needed' -o out/simv
 
-run:
+run_all:
 			@echo "Running Tests"
 			@for i in $(TEST_NAMES); do \
 				./simv -l $$i.log +UVM_TIMEOUT=900000000 +UVM_TESTNAME=$$i;\
@@ -28,9 +31,11 @@ run_cov_all:
 			done
 			urg -dir *_test/*.vdb -elfile exclusion.el -excl_bypass_checks	
 
-run-test:
+run_base:
 			@echo "Running $(TEST) Test"
-			./simv -l ${TEST}.log +UVM_TIMEOUT=900000000 +UVM_TESTNAME=${TEST}
+			@echo $(PWD);\
+			cd out;\
+			./simv -l ${TEST}.log +UVM_TIMEOUT=900000000 +UVM_TESTNAME=${TEST} UVM_VERBOSITY=${VERB} +ntb_random_seed=${SEED} 
 
 dve: 		
 			dve -covdir *_test/*.vdb &
